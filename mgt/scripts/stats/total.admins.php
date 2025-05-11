@@ -1,5 +1,16 @@
 <?php 
-include_once '../../includes/conn.php';
+
+$host='localhost';
+$user='root';
+$password='';
+$dbname="mbrs";
+
+#SET DNS
+$dns='mysql:host='.$host.';dbname='.$dbname;
+
+#CREATE PDO INSTANCE
+$pdo =new PDO($dns,$user,$password);
+$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
 
 // TOTAL NUMBER OF USERS IN SYTEM 
 $stmt =$pdo->prepare( "SELECT * FROM admins ORDER BY id");

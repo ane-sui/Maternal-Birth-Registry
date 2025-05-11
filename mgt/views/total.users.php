@@ -1,5 +1,5 @@
 <?php
-include_once '../layout.view.php';
+include_once 'nav.php';
 include_once '../inc/conn.php';
 include_once '../inc/functions.php';
 // ensure_is_user_authenticated();

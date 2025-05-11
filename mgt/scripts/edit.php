@@ -6,7 +6,7 @@
 $id=$_GET['id'] ?? null;
 
 if(!$id){
-    redirect('../views/patients.php');
+    redirect('../patients.php');
 }
 
 $sql='SELECT * FROM maidens WHERE id=:id';
@@ -20,7 +20,7 @@ foreach($results as $result):?>
 
 <section class="reg-form">
     <div class="container"> 
-        <form action="includes/update.inc.php" method="post">
+        <form action="../inc/update.inc.php" method="post">
                 <input type="hidden" name="id" value="<?=$result->id?>">
         <span><b> Mother's Details:</b></span><br>
         <div class="row">

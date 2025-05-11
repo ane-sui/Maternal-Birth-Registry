@@ -22,8 +22,6 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
-<title> Patients </title>
-
 <title>Management Login</title>
 <section class=" mid">
     <!-- <img class="img-fluid" src="../img/flower.jpg" alt=""> -->

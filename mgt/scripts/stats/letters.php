@@ -14,6 +14,6 @@ $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
 
 
 // TOTAL NUMBER OF USERS IN SYTEM 
-$stmt =$pdo->prepare( "SELECT * FROM maidens WHERE sex ='Female'");
+$stmt =$pdo->prepare( "SELECT * FROM issued ");
 $stmt->execute();
-$female=$stmt->rowCount();
+$issued=$stmt->rowCount();

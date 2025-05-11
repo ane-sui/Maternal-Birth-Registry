@@ -168,6 +168,12 @@ justify-content: center;
     border-radius: 100%;
     margin-left:200px;
 }
+
+.neo4{
+    width:180px;
+    /* border-radius: 100%; */
+    /* margin-left:200px; */
+}
 .con3{
     padding: 20px 20px 30px 20px;
     /* margin-top:  10px; */

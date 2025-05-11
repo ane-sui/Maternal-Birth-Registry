@@ -1,8 +1,20 @@
 <?php 
-    include_once '../inc/conn.php';
-    include('../inc/functions.php');
-    include_once '../layout.view.php';
-    // ensure_is_user_authenticated();
+$host='localhost';
+$user='root';
+$password='';
+$dbname="mbrs";
+
+#SET DNS
+$dns='mysql:host='.$host.';dbname='.$dbname;
+
+#CREATE PDO INSTANCE
+$pdo =new PDO($dns,$user,$password);
+$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
+
+
+    include('inc/functions.php');
+    include_once 'layout.view.php';
+    ensure_is_user_authenticated();
 
 $sql='SELECT * FROM maidens';
 $stmt=$pdo->prepare($sql);
@@ -36,6 +48,8 @@ if ($_GET['update']=="success")
 <body >
 
 <section class="view">
+
+
     <table class=" table table-bordered table-striped " >
 <?php if(!empty($msg)){echo $msg;}?>      
 
@@ -64,11 +78,11 @@ if ($_GET['update']=="success")
 
             <!-- edit buttons -->
             <td>
-                <a class="btn btn-success btn-sm" href="../scripts/edit.php?=$result->id?>">Edit</a>
+                <a class="btn btn-success btn-sm" href="scripts/edit.php?id=<?=$result->id?>">Edit</a>
             </td>
             <!-- user profile -->
             <td>
-                <a class="btn btn-warning btn-sm" href="../profile.php?id=<?=$result->id?>&idNumber=<?=$result->idNumber?>">Profile</a>
+                <a class="btn btn-warning btn-sm" href="profile.php?id=<?=$result->id?>&idNumber=<?=$result->idNumber?>">Profile</a>
             </td>
 
             
@@ -81,6 +95,7 @@ if ($_GET['update']=="success")
                 </form>
             </td> -->
             <!-- # -->
+            
             <td>
                 <form style="display: inline-block;" method="POST" action="inc/delete.inc.php">
                     <input type="hidden" name="id" value="<?php echo $result->id?>">
@@ -94,6 +109,6 @@ if ($_GET['update']=="success")
 
     </table>
 </section>
-<?php include_once '../../footer.php';?>
+<!-- <?php include_once '../../footer.php';?> -->
 
     

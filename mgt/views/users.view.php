@@ -1,5 +1,5 @@
 <?php
-include_once 'layout.view.php';
+include_once 'nav.php';
 include_once '../../includes/conn.php';
 include_once '../../includes/functions.php';
 ensure_is_user_authenticated();
@@ -14,10 +14,10 @@ if(isset($_GET['update']))
 {
 if ($_GET['update']=="create")
     {
-        $msg='<h6 class="ok">USER REQUEST SUCCESSFULY ACCEPTED</h6>';
+        $msg='<h6 class="ok">USER REQUEST SUCCESSFULLY ACCEPTED</h6>';
     }
     elseif ($_GET['update']=="delete") {
-        $msg='<h6 class="msg">USER REQUEST SUCCESSFULY DELETED</h6>';
+        $msg='<h6 class="msg">USER REQUEST SUCCESSFULLY DELETED</h6>';
     }
 }
 ?>
@@ -28,7 +28,6 @@ if ($_GET['update']=="create")
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 <title> Total Users </title>
-
 <section class="view">
     <table class=" alert-info table table-bordered table-warning">
     <?php if(!empty($msg)){echo $msg;}?>      
@@ -41,7 +40,7 @@ if ($_GET['update']=="create")
             <th>Phone Number</th>
             <th>Actions </th>
             <th></th>
-        </tr >
+        </tr>
     </thead >
     <tbody  class="border-1 alert-info">
         <?php foreach($results as $result):?>
@@ -65,6 +64,3 @@ if ($_GET['update']=="create")
     </table>
 </section>
 <?php include_once '../../footer.php';?>
-
-
-    

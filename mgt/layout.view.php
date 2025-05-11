@@ -18,10 +18,10 @@ session_start();
             <a href="index.php" class="navbar-brand">MATERNAL BIRTH REGISTRY SYSTEM</a>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a href="views/reports.php" class="nav-link">Reports</a>
+                    <a href="reports.php" class="nav-link">Reports</a>
                 </li> 
                 <li class="nav-item">
-                    <a href="views/patients.php" class="nav-link">Patients</a>
+                    <a href="patients.php" class="nav-link">Patients</a>
                 </li> 
                 <li class="nav-item">
                     <a href="visuals.php" class="nav-link">Data Visualization</a>
@@ -30,14 +30,14 @@ session_start();
                     <a href="#" class="nav-link"><?=$_SESSION['name']." ".$_SESSION['surname']?></a>
                 </li>
                 <li class="nav-item">
-                    <a href="../inc/logout.inc.php" class="nav-link">Logout</a>
+                    <a href="inc/logout.inc.php" class="nav-link">Logout</a>
                 </li> 
             </ul>
         </div>
     </nav>
 <?php endif;?>
 </header>
-<!-- <?php if (!isset($_SESSION['email'])):?>
+<?php if (!isset($_SESSION['email'])):?>
 <header>
     <nav  class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="container">
@@ -65,4 +65,4 @@ session_start();
         </div>
     </nav>
 <?php endif;?>
-</header> -->
+</header>

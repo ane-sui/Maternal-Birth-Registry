@@ -148,7 +148,7 @@
   // $stmt=$pdo->prepare("UPDATE maidens SET surname=:surname, name=:name, id_number=:id_number, address=:address, dob=:dob, sex=:sex, birth_place=:birth_place, weight=:weight, hos_number=:hos_number, birth_status=:birth_status WHERE id=:id");
   
   
-  redirect('../view_patients.php?update=success'); 
+  redirect('../patients.php?update=success'); 
   exit();
   
   

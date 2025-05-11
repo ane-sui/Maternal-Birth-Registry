@@ -1,32 +1,45 @@
 <?php
 include_once 'nav.php';
 
-
 include_once '../inc/conn.php';
 include_once '../inc/functions.php';
 
-$sql='SELECT * FROM maidens WHERE sex="female" ORDER BY id ';
+$sql='SELECT * FROM issued';
 $stmt=$pdo->prepare($sql);
 $stmt->execute();
 $results=$stmt->fetchAll();?>
+<?php
+$msg=[];
+if(isset($_GET['update']))
+{
+    if ($_GET['update']=="delete") {
+        $msg='<h6 class="ok">ADMIN SUCCESSFULY DELETED</h6>';
+    }
+}
+?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-<title> Total Users </title>
+<title>Birth Confirmation Letters Issued </title>
 
-  
 <section class="view">
-    <table class=" alert-info table table-bordered table-warning"  >
+    <table class=" alert-info table table-bordered table-warning">
+    <?php if(!empty($msg)){echo $msg;}?>      
     <thead class=" alert-info" >
         <tr>
-            <th >Maiden Name</th >
-            <th>Maiden Surname</th>
-            <th>Maiden'sAddress</th>
-            <th>Sex Of Child</th>
-            <th>Weight Of Child</th>
+            <th >Name</th >
+            <th>Surname</th>
+            <th>Age</th>
+            <th>Id Number</th>
+            <th>Address</th>
+            <th>Marital Status</th>
+
+            <th>issue Date</th>
+         
+            <!-- <th>Action </th> -->
         </tr >
     </thead >
     <tbody  class="border-1 alert-info">
@@ -34,9 +47,12 @@ $results=$stmt->fetchAll();?>
         <tr>
             <td><?=$result->name?></td >
             <td><?=$result->surname?></td>
+            <td><?=$result->age?></td>
+            <td><?=$result->idNumber?></td>
             <td><?=$result->address?></td>
-            <td><?=$result->sex?></td>
-            <td><?=$result->weight?></td>
+            <td><?=$result->maritalStatus?></td>
+
+            <td><?=$result->issueDate?></td>
             
             <!-- <td>
                 <form style="display: inline-block;" method="POST" action="../scripts/delete.php">

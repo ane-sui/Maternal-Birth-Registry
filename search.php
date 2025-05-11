@@ -42,9 +42,9 @@ if(isset($_POST['submit']))
 </style>
 
 <body>
-    <div class="con">
-    <section class="<?php if($out->sex=='male'||$out->sex=='male'){echo 'boy';}elseif ($out->sex=='female'||$out->sex=='female'){echo "girl";}?>">  
-            <div class="container"> 
+
+<!-- <div class="con"> -->
+            <!-- <div class="container"> 
                 <div style="margin-left:79%; padding-left:10px;padding-right:30px; font-weight:600;" class="rec-number"><?='GKSDH-000'.$out->id?></div>
                 <p  style="margin-left:7%; padding-left:10px; padding-right:30px;"><b>BIRTH CONFIRMATION RECORD CERTIFICATE </b></p>
                 <img src="img/arms.jpg" style="margin-left:38%; padding-left:10px; padding-right:30px;" class="neo2" alt="">
@@ -139,7 +139,84 @@ if(isset($_POST['submit']))
             </div>
         </div>
 
+    </section> -->
+
+    <section class="con2">  
+    <section class="<?php if($out->sex=='male'||$out->sex=='male'){echo 'boy';}elseif ($out->sex=='female'||$out->sex=='female'){echo "girl";}?>">  
+<h5>BIRTH CONFIRMATION RECORD CERTIFICATE</h5>
+    <img src="img/arms.jpg" style="margin-left:-2%;margin-top:2%; padding-left:10px; padding-right:30px;" class="neo4" alt="">
+   
+               
+   
+   
+    <!-- <div class="container">  -->
+                <article class="left">
+                    <div class="row">
+                        <div class="col">
+                            <p>Name: <?=$out->name?></p>
+                        </div>
+                        
+                        <div class="col">
+                            <p>Surname: <?=$out->surname?></p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <p>Address: <?=$out->address?></p>
+                        </div>
+                        
+                        <div class="col">
+                            <p>Age: <?=$out->age?></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>ID Number: <?=$out->idNumber?></p>
+                        </div>
+                        
+                        <div class="col">
+                            <p>Marital Status: <?=$out->maritalStatus?></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>Weight: <?=$out->childWeight?></p>
+                        
+                        </div>
+                        
+                        <div class="col">
+                            <p>Delivery Date: <?=$out->deliveryDate?></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>Birth Facility: <?=$out->birthPlace?></p>
+                        </div>
+                        
+                        <div class="col">
+                            <p>Twin Status: <?=$out->twinStatus?></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>Issued By: <?=$_SESSION['name']." ".$_SESSION['surname'] ?></p>
+                        </div>
+                        
+                        <div class="col">
+                            <p>Date of Issue: <?=date('Y-m-d')?></p>
+                        </div>
+                    </div>
+                    </article>
+                  
+            <!-- </div> -->
     </section>
+    <input id="print" style="margin-left: 45%;" type="button" value="Print" class="btn btn-warning btn-sm">
+
+</body>
+
+
+
 
 </body>
 <!-- <?php include_once 'footer.php';?> -->
