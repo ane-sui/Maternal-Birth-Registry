@@ -12,33 +12,6 @@ if(isset($_POST['register']))
         $pwd=md5($_POST['pwd']);
         $rePwd=md5($_POST['rePwd']);
     
-        if (empty($name)&&empty($surname)&&empty($email)&& empty($pwd)&&empty($cpwd)){
-        redirect('../views/reg.admin.php?update=empty');
-        exit();
-    }
-    if(empty($name)){
-        redirect("../views/reg.admin.php?update=name&last=$surname&email=$email");
-        exit();
-    }
-    elseif(empty($surname)){
-        redirect("../views/reg.admin.php?update=surname&name=$name&last=$surname&email=$email");
-        exit();
-    }
-    elseif(empty($email)){
-        redirect("../views/reg.admin.php?update=email&name=$name&last=$surname");
-        exit();
-    }
-    elseif(empty($pwd)){
-        redirect("../views/reg.admin.php?update=pwd&name=$name&last=$surname&email=$email");
-        exit();
-    }
-
-    elseif($pwd!=$rePwd)
-    {
-        redirect("../views/reg.admin.php?update=mismatch&name=$name&last=$surname&email=$email");
-        exit();
-    }
-else 
     {
         $stmt=$pdo->prepare
         (

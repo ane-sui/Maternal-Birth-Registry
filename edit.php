@@ -30,7 +30,7 @@ foreach($results as $result):?>
                 <input type="text" name="name"  class="form-control form-control-sm" value="<?=$result->name?>" >
             </div>
             <div class="col">
-                <label>Last Name</label>
+                <label class="form-label">Last Name</label>
                 <input type="text" name="surname" class="form-control form-control-sm" value="<?=$result->surname?>">
             </div>
         </div>

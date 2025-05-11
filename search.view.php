@@ -22,8 +22,9 @@ if (isset($_GET['search']))
     <section>
     <?php if (!empty($msg )){echo $msg;}?>
             <form  action="search.php" method="post" class="d-flex">
-            <input value="<?php if(!empty($_GET['search'])){echo $_GET['search'];}?>" class="form-control form-control-sm me-2" type="search" name="search" placeholder="Enter Maiden's ID Number" >
-                <button name="submit" class="btn btn-warning  btn-sm" type="submit">Search</button>
+            <input value="<?php if(!empty($_GET['search'])){echo $_GET['search'];}?>" class="form-control form-control-sm me-2" type="search" name="idNumber" placeholder="Enter Maiden's ID Number" >
+            <input type="date" name="deliveryDate" id="dob" class="form-control form-control-sm">    
+            <button name="submit" class="btn btn-warning  btn-sm" type="submit">Search</button>
             </form>
         </div>
     </section>

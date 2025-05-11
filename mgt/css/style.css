@@ -131,7 +131,10 @@ justify-content: center;
     font-size: small;
 }
 .tb{
-    font-size: medium;
+    font-size: small;
+}
+.tbt{
+    font-size:smaller;
 }
 .con2{
     padding: 20px 20px 30px 20px;

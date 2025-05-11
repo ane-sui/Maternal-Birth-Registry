@@ -43,6 +43,93 @@ $errors=[];
 
 ensure_is_user_authenticated();
 
+
+// if(empty($name)&&empty($surname)&&empty($address)&&empty($ethnicity)&&empty($age)&&empty($nationality)&&empty($idNumber)&&empty($weight)&&empty($education)&&empty($phoneNumber)&&empty($complications)&&empty($gaNumber)&&empty($obsteric)&&empty($deliveryDate)&&empty($deliveryMethod)&&empty($bloodLoss)&&empty($placenta)&&empty($deliveredBy)&&empty($assistedBy)&&empty($regDate)&&empty($birthOutcome)&&empty($childrenAlive)&&empty($admissionDate)&&empty($apScore)&&empty($labor)&&empty($comments)&&empty($birthPlace)&&empty($profession)&&empty($vitaminA)&&empty($onAdmission)&&empty($sex)&&empty($tetanus)&&empty($childHIVStatus)&&empty($afterAdmission)&&empty($childWeight)&&empty($hosNum)&&empty($ancNum)&&empty($regBy)&&empty($childName)&&empty($maritalStatus)&&empty($husbandName)){
+//     redirect("../maiden-reg.php?register=empty&name=$name&surname=$surname&address=$address&ethnicity=$ethnicity&age=$age&nationality=$nationality&idNumber=$idNumber&weight=$weight&education=$education&phoneNumber=$phoneNumber&complications=$complications&placenta=$placenta&gaNumber=$gaNumber&obsteric=$obsteric&deliveryDate=$deliveryDate&deliveryMethod=$deliveryMethod&bloodLoss=$bloodLoss&placenta=$placenta&deliveredBy=$deliveredBy&assistedBy=$assistedBy&regDate=$regDate&birthOutcome=$birthOutcome&childrenAlive=$childrenAlive&admissionDate=$admissionDate&apScore=$apScore&labor=$labor&comments=$comments&birthPlace=$birthPlace&profession=$profession&vitaminA=$vitaminA&onAdmission=$onAdmission&sex=$sex&tetanus=$tetanus&regBy=$regBy&childName=$childName&maritalStatus=$maritalStatus&husbandName=$husbandName");
+//     exit();
+// }
+
+// elseif(empty($name)&&empty($surname)&&empty($address)&&empty($ethnicity)&&empty($age)&&empty($nationality)&&empty($idNumber)&&empty($weight)&&empty($education)&&empty($phoneNumber)&&empty($complications)&&empty($gaNumber)&&empty($obsteric)&&empty($deliveryDate)&&empty($deliveryMethod)&&empty($bloodLoss)&&empty($placenta)&&empty($deliveredBy)&&empty($assistedBy)&&empty($regDate)&&empty($birthOutcome)&&empty($childrenAlive)&&empty($admissionDate)&&empty($apScore)&&empty($labor)&&empty($comments)&&empty($birthPlace)&&empty($profession)&&empty($vitaminA)&&empty($onAdmission)&&empty($sex)&&empty($tetanus)&&empty($childHIVStatus)&&empty($afterAdmission)&&empty($childWeight)&&empty($hosNum)&&empty($ancNum)&&empty($regBy)&&empty($childName)&&empty($maritalStatus)&&empty($husbandName)){
+//     redirect("../maiden-reg.php?register=empty");
+//     exit();
+// }
+
+// elseif(empty($name)&&empty($surname)&&empty($address)&&empty($ethnicity)&&empty($age)&&empty($nationality)&&empty($idNumber)&&empty($weight)&&empty($education)&&empty($phoneNumber)&&empty($complications)&&empty($gaNumber)&&empty($obsteric)&&empty($deliveryDate)&&empty($deliveryMethod)&&empty($bloodLoss)&&empty($placenta)&&empty($deliveredBy)&&empty($assistedBy)&&empty($regDate)&&empty($birthOutcome)&&empty($childrenAlive)&&empty($admissionDate)&&empty($apScore)&&empty($labor)&&empty($comments)&&empty($birthPlace)&&empty($profession)&&empty($vitaminA)&&empty($onAdmission)&&empty($sex)&&empty($tetanus)&&empty($childHIVStatus)&&empty($afterAdmission)&&empty($childWeight)&&empty($hosNum)&&empty($ancNum)&&empty($regBy)&&empty($childName)&&empty($maritalStatus)&&empty($husbandName)){
+//     redirect("../maiden-reg.php?register=empty");
+//     exit();
+// }
+
+// elseif(empty($name)&&empty($surname)&&empty($address)&&empty($ethnicity)&&empty($age)&&empty($nationality)&&empty($idNumber)&&empty($weight)&&empty($education)&&empty($phoneNumber)&&empty($complications)&&empty($gaNumber)&&empty($obsteric)&&empty($deliveryDate)&&empty($deliveryMethod)&&empty($bloodLoss)&&empty($placenta)&&empty($deliveredBy)&&empty($assistedBy)&&empty($regDate)&&empty($birthOutcome)&&empty($childrenAlive)&&empty($admissionDate)&&empty($apScore)&&empty($labor)&&empty($comments)&&empty($birthPlace)&&empty($profession)&&empty($vitaminA)&&empty($onAdmission)&&empty($sex)&&empty($tetanus)&&empty($childHIVStatus)&&empty($afterAdmission)&&empty($childWeight)&&empty($hosNum)&&empty($ancNum)&&empty($regBy)&&empty($childName)&&empty($maritalStatus)&&empty($husbandName)){
+//     redirect("../maiden-reg.php?register=empty");
+//     exit();
+// }
+// elseif(empty($name)&&empty($surname)&&empty($address)&&empty($ethnicity)&&empty($age)&&empty($nationality)&&empty($idNumber)&&empty($weight)&&empty($education)&&empty($phoneNumber)&&empty($complications)&&empty($gaNumber)&&empty($obsteric)&&empty($deliveryDate)&&empty($deliveryMethod)&&empty($bloodLoss)&&empty($placenta)&&empty($deliveredBy)&&empty($assistedBy)&&empty($regDate)&&empty($birthOutcome)&&empty($childrenAlive)&&empty($admissionDate)&&empty($apScore)&&empty($labor)&&empty($comments)&&empty($birthPlace)&&empty($profession)&&empty($vitaminA)&&empty($onAdmission)&&empty($sex)&&empty($tetanus)&&empty($childHIVStatus)&&empty($afterAdmission)&&empty($childWeight)&&empty($hosNum)&&empty($ancNum)&&empty($regBy)&&empty($childName)&&empty($maritalStatus)&&empty($husbandName)){
+//     redirect("../maiden-reg.php?register=empty");
+//     exit();
+// }
+// elseif(empty($name)&&empty($surname)&&empty($address)&&empty($ethnicity)&&empty($age)&&empty($nationality)&&empty($idNumber)&&empty($weight)&&empty($education)&&empty($phoneNumber)&&empty($complications)&&empty($gaNumber)&&empty($obsteric)&&empty($deliveryDate)&&empty($deliveryMethod)&&empty($bloodLoss)&&empty($placenta)&&empty($deliveredBy)&&empty($assistedBy)&&empty($regDate)&&empty($birthOutcome)&&empty($childrenAlive)&&empty($admissionDate)&&empty($apScore)&&empty($labor)&&empty($comments)&&empty($birthPlace)&&empty($profession)&&empty($vitaminA)&&empty($onAdmission)&&empty($sex)&&empty($tetanus)&&empty($childHIVStatus)&&empty($afterAdmission)&&empty($childWeight)&&empty($hosNum)&&empty($ancNum)&&empty($regBy)&&empty($childName)&&empty($maritalStatus)&&empty($husbandName)){
+//     redirect("../maiden-reg.php?register=empty");
+//     exit();
+// }
+// elseif(empty($name)&&empty($surname)&&empty($address)&&empty($ethnicity)&&empty($age)&&empty($nationality)&&empty($idNumber)&&empty($weight)&&empty($education)&&empty($phoneNumber)&&empty($complications)&&empty($gaNumber)&&empty($obsteric)&&empty($deliveryDate)&&empty($deliveryMethod)&&empty($bloodLoss)&&empty($placenta)&&empty($deliveredBy)&&empty($assistedBy)&&empty($regDate)&&empty($birthOutcome)&&empty($childrenAlive)&&empty($admissionDate)&&empty($apScore)&&empty($labor)&&empty($comments)&&empty($birthPlace)&&empty($profession)&&empty($vitaminA)&&empty($onAdmission)&&empty($sex)&&empty($tetanus)&&empty($childHIVStatus)&&empty($afterAdmission)&&empty($childWeight)&&empty($hosNum)&&empty($ancNum)&&empty($regBy)&&empty($childName)&&empty($maritalStatus)&&empty($husbandName)){
+//     redirect("../maiden-reg.php?register=empty");
+//     exit();
+// }
+// elseif(empty($name)&&empty($surname)&&empty($address)&&empty($ethnicity)&&empty($age)&&empty($nationality)&&empty($idNumber)&&empty($weight)&&empty($education)&&empty($phoneNumber)&&empty($complications)&&empty($gaNumber)&&empty($obsteric)&&empty($deliveryDate)&&empty($deliveryMethod)&&empty($bloodLoss)&&empty($placenta)&&empty($deliveredBy)&&empty($assistedBy)&&empty($regDate)&&empty($birthOutcome)&&empty($childrenAlive)&&empty($admissionDate)&&empty($apScore)&&empty($labor)&&empty($comments)&&empty($birthPlace)&&empty($profession)&&empty($vitaminA)&&empty($onAdmission)&&empty($sex)&&empty($tetanus)&&empty($childHIVStatus)&&empty($afterAdmission)&&empty($childWeight)&&empty($hosNum)&&empty($ancNum)&&empty($regBy)&&empty($childName)&&empty($maritalStatus)&&empty($husbandName)){
+//     redirect("../maiden-reg.php?register=empty");
+//     exit();
+// }
+// elseif(empty($name)&&empty($surname)&&empty($address)&&empty($ethnicity)&&empty($age)&&empty($nationality)&&empty($idNumber)&&empty($weight)&&empty($education)&&empty($phoneNumber)&&empty($complications)&&empty($gaNumber)&&empty($obsteric)&&empty($deliveryDate)&&empty($deliveryMethod)&&empty($bloodLoss)&&empty($placenta)&&empty($deliveredBy)&&empty($assistedBy)&&empty($regDate)&&empty($birthOutcome)&&empty($childrenAlive)&&empty($admissionDate)&&empty($apScore)&&empty($labor)&&empty($comments)&&empty($birthPlace)&&empty($profession)&&empty($vitaminA)&&empty($onAdmission)&&empty($sex)&&empty($tetanus)&&empty($childHIVStatus)&&empty($afterAdmission)&&empty($childWeight)&&empty($hosNum)&&empty($ancNum)&&empty($regBy)&&empty($childName)&&empty($maritalStatus)&&empty($husbandName)){
+//     redirect("../maiden-reg.php?register=empty");
+//     exit();
+// }
+// elseif(empty($name)&&empty($surname)&&empty($address)&&empty($ethnicity)&&empty($age)&&empty($nationality)&&empty($idNumber)&&empty($weight)&&empty($education)&&empty($phoneNumber)&&empty($complications)&&empty($gaNumber)&&empty($obsteric)&&empty($deliveryDate)&&empty($deliveryMethod)&&empty($bloodLoss)&&empty($placenta)&&empty($deliveredBy)&&empty($assistedBy)&&empty($regDate)&&empty($birthOutcome)&&empty($childrenAlive)&&empty($admissionDate)&&empty($apScore)&&empty($labor)&&empty($comments)&&empty($birthPlace)&&empty($profession)&&empty($vitaminA)&&empty($onAdmission)&&empty($sex)&&empty($tetanus)&&empty($childHIVStatus)&&empty($afterAdmission)&&empty($childWeight)&&empty($hosNum)&&empty($ancNum)&&empty($regBy)&&empty($childName)&&empty($maritalStatus)&&empty($husbandName)){
+//     redirect("../maiden-reg.php?register=empty");
+//     exit();
+// }
+// elseif(empty($name)&&empty($surname)&&empty($address)&&empty($ethnicity)&&empty($age)&&empty($nationality)&&empty($idNumber)&&empty($weight)&&empty($education)&&empty($phoneNumber)&&empty($complications)&&empty($gaNumber)&&empty($obsteric)&&empty($deliveryDate)&&empty($deliveryMethod)&&empty($bloodLoss)&&empty($placenta)&&empty($deliveredBy)&&empty($assistedBy)&&empty($regDate)&&empty($birthOutcome)&&empty($childrenAlive)&&empty($admissionDate)&&empty($apScore)&&empty($labor)&&empty($comments)&&empty($birthPlace)&&empty($profession)&&empty($vitaminA)&&empty($onAdmission)&&empty($sex)&&empty($tetanus)&&empty($childHIVStatus)&&empty($afterAdmission)&&empty($childWeight)&&empty($hosNum)&&empty($ancNum)&&empty($regBy)&&empty($childName)&&empty($maritalStatus)&&empty($husbandName)){
+//     redirect("../maiden-reg.php?register=empty");
+//     exit();
+// }
+// elseif(empty($name)&&empty($surname)&&empty($address)&&empty($ethnicity)&&empty($age)&&empty($nationality)&&empty($idNumber)&&empty($weight)&&empty($education)&&empty($phoneNumber)&&empty($complications)&&empty($gaNumber)&&empty($obsteric)&&empty($deliveryDate)&&empty($deliveryMethod)&&empty($bloodLoss)&&empty($placenta)&&empty($deliveredBy)&&empty($assistedBy)&&empty($regDate)&&empty($birthOutcome)&&empty($childrenAlive)&&empty($admissionDate)&&empty($apScore)&&empty($labor)&&empty($comments)&&empty($birthPlace)&&empty($profession)&&empty($vitaminA)&&empty($onAdmission)&&empty($sex)&&empty($tetanus)&&empty($childHIVStatus)&&empty($afterAdmission)&&empty($childWeight)&&empty($hosNum)&&empty($ancNum)&&empty($regBy)&&empty($childName)&&empty($maritalStatus)&&empty($husbandName)){
+//     redirect("../maiden-reg.php?register=empty");
+//     exit();
+// }
+// elseif(empty($name)&&empty($surname)&&empty($address)&&empty($ethnicity)&&empty($age)&&empty($nationality)&&empty($idNumber)&&empty($weight)&&empty($education)&&empty($phoneNumber)&&empty($complications)&&empty($gaNumber)&&empty($obsteric)&&empty($deliveryDate)&&empty($deliveryMethod)&&empty($bloodLoss)&&empty($placenta)&&empty($deliveredBy)&&empty($assistedBy)&&empty($regDate)&&empty($birthOutcome)&&empty($childrenAlive)&&empty($admissionDate)&&empty($apScore)&&empty($labor)&&empty($comments)&&empty($birthPlace)&&empty($profession)&&empty($vitaminA)&&empty($onAdmission)&&empty($sex)&&empty($tetanus)&&empty($childHIVStatus)&&empty($afterAdmission)&&empty($childWeight)&&empty($hosNum)&&empty($ancNum)&&empty($regBy)&&empty($childName)&&empty($maritalStatus)&&empty($husbandName)){
+//     redirect("../maiden-reg.php?register=empty");
+//     exit();
+// }
+// elseif(empty($name)&&empty($surname)&&empty($address)&&empty($ethnicity)&&empty($age)&&empty($nationality)&&empty($idNumber)&&empty($weight)&&empty($education)&&empty($phoneNumber)&&empty($complications)&&empty($gaNumber)&&empty($obsteric)&&empty($deliveryDate)&&empty($deliveryMethod)&&empty($bloodLoss)&&empty($placenta)&&empty($deliveredBy)&&empty($assistedBy)&&empty($regDate)&&empty($birthOutcome)&&empty($childrenAlive)&&empty($admissionDate)&&empty($apScore)&&empty($labor)&&empty($comments)&&empty($birthPlace)&&empty($profession)&&empty($vitaminA)&&empty($onAdmission)&&empty($sex)&&empty($tetanus)&&empty($childHIVStatus)&&empty($afterAdmission)&&empty($childWeight)&&empty($hosNum)&&empty($ancNum)&&empty($regBy)&&empty($childName)&&empty($maritalStatus)&&empty($husbandName)){
+//     redirect("../maiden-reg.php?register=empty");
+//     exit();
+// }
+// elseif(empty($name)&&empty($surname)&&empty($address)&&empty($ethnicity)&&empty($age)&&empty($nationality)&&empty($idNumber)&&empty($weight)&&empty($education)&&empty($phoneNumber)&&empty($complications)&&empty($gaNumber)&&empty($obsteric)&&empty($deliveryDate)&&empty($deliveryMethod)&&empty($bloodLoss)&&empty($placenta)&&empty($deliveredBy)&&empty($assistedBy)&&empty($regDate)&&empty($birthOutcome)&&empty($childrenAlive)&&empty($admissionDate)&&empty($apScore)&&empty($labor)&&empty($comments)&&empty($birthPlace)&&empty($profession)&&empty($vitaminA)&&empty($onAdmission)&&empty($sex)&&empty($tetanus)&&empty($childHIVStatus)&&empty($afterAdmission)&&empty($childWeight)&&empty($hosNum)&&empty($ancNum)&&empty($regBy)&&empty($childName)&&empty($maritalStatus)&&empty($husbandName)){
+//     redirect("../maiden-reg.php?register=empty");
+//     exit();
+// }
+// elseif(empty($name)&&empty($surname)&&empty($address)&&empty($ethnicity)&&empty($age)&&empty($nationality)&&empty($idNumber)&&empty($weight)&&empty($education)&&empty($phoneNumber)&&empty($complications)&&empty($gaNumber)&&empty($obsteric)&&empty($deliveryDate)&&empty($deliveryMethod)&&empty($bloodLoss)&&empty($placenta)&&empty($deliveredBy)&&empty($assistedBy)&&empty($regDate)&&empty($birthOutcome)&&empty($childrenAlive)&&empty($admissionDate)&&empty($apScore)&&empty($labor)&&empty($comments)&&empty($birthPlace)&&empty($profession)&&empty($vitaminA)&&empty($onAdmission)&&empty($sex)&&empty($tetanus)&&empty($childHIVStatus)&&empty($afterAdmission)&&empty($childWeight)&&empty($hosNum)&&empty($ancNum)&&empty($regBy)&&empty($childName)&&empty($maritalStatus)&&empty($husbandName)){
+//     redirect("../maiden-reg.php?register=empty");
+//     exit();
+// }
+// elseif(empty($name)&&empty($surname)&&empty($address)&&empty($ethnicity)&&empty($age)&&empty($nationality)&&empty($idNumber)&&empty($weight)&&empty($education)&&empty($phoneNumber)&&empty($complications)&&empty($gaNumber)&&empty($obsteric)&&empty($deliveryDate)&&empty($deliveryMethod)&&empty($bloodLoss)&&empty($placenta)&&empty($deliveredBy)&&empty($assistedBy)&&empty($regDate)&&empty($birthOutcome)&&empty($childrenAlive)&&empty($admissionDate)&&empty($apScore)&&empty($labor)&&empty($comments)&&empty($birthPlace)&&empty($profession)&&empty($vitaminA)&&empty($onAdmission)&&empty($sex)&&empty($tetanus)&&empty($childHIVStatus)&&empty($afterAdmission)&&empty($childWeight)&&empty($hosNum)&&empty($ancNum)&&empty($regBy)&&empty($childName)&&empty($maritalStatus)&&empty($husbandName)){
+//     redirect("../maiden-reg.php?register=empty");
+//     exit();
+// }
+// elseif(empty($name)&&empty($surname)&&empty($address)&&empty($ethnicity)&&empty($age)&&empty($nationality)&&empty($idNumber)&&empty($weight)&&empty($education)&&empty($phoneNumber)&&empty($complications)&&empty($gaNumber)&&empty($obsteric)&&empty($deliveryDate)&&empty($deliveryMethod)&&empty($bloodLoss)&&empty($placenta)&&empty($deliveredBy)&&empty($assistedBy)&&empty($regDate)&&empty($birthOutcome)&&empty($childrenAlive)&&empty($admissionDate)&&empty($apScore)&&empty($labor)&&empty($comments)&&empty($birthPlace)&&empty($profession)&&empty($vitaminA)&&empty($onAdmission)&&empty($sex)&&empty($tetanus)&&empty($childHIVStatus)&&empty($afterAdmission)&&empty($childWeight)&&empty($hosNum)&&empty($ancNum)&&empty($regBy)&&empty($childName)&&empty($maritalStatus)&&empty($husbandName)){
+//     redirect("../maiden-reg.php?register=empty");
+//     exit();
+// }
+// elseif(empty($name)&&empty($surname)&&empty($address)&&empty($ethnicity)&&empty($age)&&empty($nationality)&&empty($idNumber)&&empty($weight)&&empty($education)&&empty($phoneNumber)&&empty($complications)&&empty($gaNumber)&&empty($obsteric)&&empty($deliveryDate)&&empty($deliveryMethod)&&empty($bloodLoss)&&empty($placenta)&&empty($deliveredBy)&&empty($assistedBy)&&empty($regDate)&&empty($birthOutcome)&&empty($childrenAlive)&&empty($admissionDate)&&empty($apScore)&&empty($labor)&&empty($comments)&&empty($birthPlace)&&empty($profession)&&empty($vitaminA)&&empty($onAdmission)&&empty($sex)&&empty($tetanus)&&empty($childHIVStatus)&&empty($afterAdmission)&&empty($childWeight)&&empty($hosNum)&&empty($ancNum)&&empty($regBy)&&empty($childName)&&empty($maritalStatus)&&empty($husbandName)){
+//     redirect("../maiden-reg.php?register=empty");
+//     exit();
+// }
+// elseif(empty($name)&&empty($surname)&&empty($address)&&empty($ethnicity)&&empty($age)&&empty($nationality)&&empty($idNumber)&&empty($weight)&&empty($education)&&empty($phoneNumber)&&empty($complications)&&empty($gaNumber)&&empty($obsteric)&&empty($deliveryDate)&&empty($deliveryMethod)&&empty($bloodLoss)&&empty($placenta)&&empty($deliveredBy)&&empty($assistedBy)&&empty($regDate)&&empty($birthOutcome)&&empty($childrenAlive)&&empty($admissionDate)&&empty($apScore)&&empty($labor)&&empty($comments)&&empty($birthPlace)&&empty($profession)&&empty($vitaminA)&&empty($onAdmission)&&empty($sex)&&empty($tetanus)&&empty($childHIVStatus)&&empty($afterAdmission)&&empty($childWeight)&&empty($hosNum)&&empty($ancNum)&&empty($regBy)&&empty($childName)&&empty($maritalStatus)&&empty($husbandName)){
+//     redirect("../maiden-reg.php?register=empty");
+//     exit();
+// }
+
+
+
 if(!empty(isset($_POST['save'])))
 {
 $name=$input["name"];
@@ -144,7 +231,8 @@ $stmt=$pdo->prepare('INSERT INTO maidens(
     husbandName) 
 
 VALUES 
-(:name,
+(
+:name,
 :surname,
 :address,
 :age,
@@ -225,8 +313,7 @@ $stmt->execute(
 'childWeight'=>$childWeight,
 'hosNum'=>$hosNum,
 'ancNum'=>$ancNum,
-'regBy'=>$regBy
-,
+'regBy'=>$regBy,
 'childName'=>$childName,
 'maritalStatus'=>$maritalStatus,
 'husbandName'=>$husbandName]

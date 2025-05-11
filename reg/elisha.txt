@@ -1,0 +1,38 @@
+<?php 
+include_once 'conn.php';
+include('functions.php');
+
+if(is_user_authenticated()){
+    redirect('index.php');
+    die();
+}
+
+if(isset($_POST['login']))
+{
+    if(!empty($_POST['email'] && $_POST['pwd']))
+    {
+
+        $input = clean($_POST);
+        $email=$input['email'];
+        $pwd=md5($_POST['pwd']);
+        
+        $stmt=$pdo->prepare('SELECT *  FROM users WHERE (email=? and pwd=?);');
+        $stmt->execute(array($email,$pwd));
+        $row = $stmt->rowCount();
+        $fetch = $stmt->fetch();
+        
+        if($row > 0) 
+        {
+            session_start();
+            $_SESSION["name"]=$fetch->name;
+            $_SESSION["email"]=$fetch->email;
+            $_SESSION['id']=$fetch->id;
+            redirect("../home.php");
+        } 
+      
+        else
+        {
+            redirect("../login.php?login=invalid&email=$email");
+        }
+    }
+}

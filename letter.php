@@ -4,17 +4,36 @@ include_once 'includes/functions.php';
 ensure_is_user_authenticated();
 
 
+// if(isset($_POST['submit']))
+// {
+//     $input = clean($_POST);
+//     $search=$_POST['search'];
+
+//     $sql="SELECT * FROM issued WHERE idNumber  LIKE ? LIMIT 1";
+
+//     $stmt=$pdo->prepare($sql);
+//     $stmt->execute(array($search));
+//     $output=$stmt->fetchAll();
+// }
+
 if(isset($_POST['submit']))
-{
-    $input = clean($_POST);
-    $search=$_POST['search'];
+    {
+        $input = clean($_POST);
+        $idNumber=$_POST['idNumber'];
+        $deliveryDate=$_POST['deliveryDate'];
+        $sql="SELECT * FROM maidens WHERE idNumber =:idNumber AND deliveryDate =:deliveryDate";
+        
+        $stmt=$pdo->prepare($sql);
 
-    $sql="SELECT * FROM issued WHERE idNumber  LIKE ? LIMIT 1";
+        $stmt->bindParam(':idNumber', $idNumber);
+        $stmt->bindParam(':deliveryDate', $deliveryDate);
 
-    $stmt=$pdo->prepare($sql);
-    $stmt->execute(array($search));
-    $output=$stmt->fetchAll();
-}?>
+        $stmt->execute();
+        $output=$stmt->fetchAll();
+
+    }
+?>
+
    <?php if (empty($output)){
     redirect("search.view.php?search=empty&search=$search");
     exit();

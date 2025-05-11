@@ -3,13 +3,35 @@
    include_once '../../includes/conn.php';
    include_once '../../includes/functions.php';
    ensure_is_user_authenticated();
-   include_once '../scripts/stats/total.admins.php';
-   include_once '../scripts/stats/total.users.php';
-   include_once '../scripts/stats/total.mothers.php';
-   include_once '../scripts/stats/total.live.php';
-   include_once '../scripts/stats/total.still.php';
-   include_once '../scripts/stats/total.males.php';
-   include_once '../scripts/stats/total.female.php';
+   
+   $host='localhost';
+   $user='root';
+   $password='';
+   $dbname="mbrs";
+   
+   #SET DNS
+   $dns='mysql:host='.$host.';dbname='.$dbname;
+   
+   #CREATE PDO INSTANCE
+   $pdo =new PDO($dns,$user,$password);
+   $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
+   
+   // TOTAL NUMBER OF USERS IN SYTEM 
+   $stmt =$pdo->prepare( "SELECT * FROM admins ORDER BY id");
+   $stmt->execute();
+   $admins=$stmt->rowCount();
+
+   $stmt =$pdo->prepare( "SELECT * FROM real_users ORDER BY id");
+   $stmt->execute();
+   $users=$stmt->rowCount();
+
+   $stmt =$pdo->prepare( "SELECT * FROM mgt ORDER BY id");
+   $stmt->execute();
+   $mgt=$stmt->rowCount();
+
+
+
+
 ?>
 <div class="index">
    </div>
@@ -19,41 +41,24 @@
     <div class="index-img " >
         <img src="../../img/img.jpg" alt="" >
     </div>
- <!-- <caption>
-         <button class=" btn btn-success btn-sm">Hello Admin <?=$_SESSION['name']." ".$_SESSION['surname'] ?></button>  
-    </caption> -->
+
 </section>
 
 
 <div class="panda">
-    <div class="gridz">
-        <div  class="btn-1 btn btn-success">
-           <a href="total.admins.php">  <p>TOTAL ADMINS <h2><?=$row ?></h2></p></a>
-        </div>
+   <div class="gridz">
+      <div  class="btn-1 btn btn-success">
+         <a href="total.admins.php">  <p>TOTAL ADMINS <h2><?=$admins ?></h2></p></a>
+      </div>
 
-        <div class="btn-2 btn btn-warning">
-           <a href="total.users.php" class="nav-link"><p>TOTAL USERS <h2><?= $users?></h2></p></a> 
-        </div>
+      <div class="btn-2 btn btn-warning">
+         <a href="total.users.php" class="nav-link"><p>TOTAL USERS <h2><?= $users?></h2></p></a> 
+      </div>
 
-        <div class="btn-3 btn btn-danger">
-          <a href="total.mothers.php"><p>TOTAL MOTHERS <h2><?= $mothers?></h2></p></a>
-        </div>
-        <div class="btn-3 btn btn-dark">
-         <a href="total.live.php"><p>TOTAL LIVE BIRTHS  <h2><?= $live ?></h2></p></a>
-        </div>
-
-        <div class="btn-3 btn btn-secondary  ">
-            <a href="total.still.php"><p>TOTAL STILL BIRTHS <h2><?= $still?></h2></p></a>
-        </div>
-
-        <div class="btn-4">
-           <a href="total.male.php"> <p>TOTAL BOYS<h2><?= $male?></h2></p></a>
-        </div>
-
-        <div class="btn-5">
-           <a href="total.female.php"> <p>TOTAL GIRLS <h2><?=$female?></h2></p></a>
-        </div>
-    </div>
+      <div class="btn-3 btn btn-danger">
+         <a href="total-mgt.php"><p>TOTAL MANAGEMENT <h2><?= $mgt?></h2></p></a>
+      </div>
+   </div>
 </div>
 
 <?php include_once '../../footer.php';?>

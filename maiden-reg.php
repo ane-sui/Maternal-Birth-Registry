@@ -2,56 +2,39 @@
     include_once 'includes/functions.php';
     include_once 'layout.view.php';
     ensure_is_user_authenticated();
-    //ERROR HANDLERS USING PHP
-    $msg=[]; 
-    if (isset($_GET['reg'])) 
-    {
-        if($_GET['reg']=="emptyfields"){
-         $msg='<h6 class="msg">PLEASE FILL ALL INPUT FILEDS</h6>';
-        }
-        elseif ($_GET['reg']=="success")
-        {
-          $msg='<h6 class="ok">PATIENT SUCCESSFULLY REGISTERED</h6>';
-        }
-        elseif ($_GET['reg']=="empty")
-        {
-          $msg='<h6 class="msg">PLEASE MAKE SURE THAT ALL INPUT FIELDS ARE FILLED!/h6>';
-        }
-     
-    }
 ?>
 
 <title>Register Mother</title>
-<div class="container-fluid"> 
+<div  class="container-fluid"> 
 <section class="reg-form">
 <?php if(!empty($msg)){echo $msg;} ?>
-<form action="includes/register.inc.php" method="post">
-<!-- <span><b> Mother's Details:</b></span><br> -->
+<form action="includes/register.inc.php" id="my-form" method="post">
+<span><b> Maiden Details:</b></span><br>
     <div class="row">
             <div class="col">    
-                <label for="">First Name</label>
-                <input type="text" name="name" class="form-control form-control-sm" placeholder="First Name">
+                <label for="name">First Name</label>
+                <input type="text" id='name' name="name" class="form-control form-control-sm" placeholder="First Name">
             </div>
             <div class="col">
-                <label>Last Name</label>
-                <input type="text" name="surname" class="form-control form-control-sm" placeholder="Last Name">
+                <label class='form-label'>Last Name</label>
+                <input type="text"  id='surname' name="surname" class="form-control form-control-sm" placeholder="Last Name">
             </div>
         </div>
         <div class="row">
             <div class="col">    
             <label for="address">Physical Address</label>
-                <input type="text" name="address" class="form-control form-control-sm" placeholder="Physical Address">
+                <input type="text" id='address' name="address" class="form-control form-control-sm" placeholder="Physical Address">
             </div>
     
             <div class="col">
                 <label for="age">Age</label>
-                <input type="number" name="age" class="form-control form-control-sm" placeholder="Age">
+                <input type="number" id='age' name="age" class="form-control form-control-sm" placeholder="Age">
             </div>
         </div>
         <div class="row">
             <div class="col">    
                 <label for="ethnicity">Ethnicity</label>
-                <select name="ethnicity" id="" class="form-control form-control-sm">
+                <select name="ethnicity" id="ethnicity" class="form-control form-control-sm">
                     <option value="African">African</option>
                     <option value="Asian">Asian</option>
                     <option value="American Indian">American Indian</option>
@@ -64,13 +47,13 @@
 
             <div class="col">
                 <label for="">Nationality</label>
-                <input type="text" name="nationality" class="form-control form-control-sm" placeholder="Nationality">
+                <input type="text" id='nationality' name="nationality" class="form-control form-control-sm" placeholder="Nationality">
             </div>
         </div>
         <div class="row">
             <div class="col">
                 <label class="form-label" for="maritalStatus">Marital Status</label>
-                <select name="maritalStatus" id="" class="form-select form-select-sm">
+                <select name="maritalStatus" id="maritalStatus" class="form-select form-select-sm">
                     <option value="Single">Single</option>
                     <option value="Married">Married</option>
                     <option value="Divorced">Divorced</option>
@@ -78,26 +61,26 @@
                 </select>
             </div>
             <div class="col">
-                <label for="husband">Husband Name</label>
-                <input type="text" name="husbandName" class="form-control form-control-sm">
+                <label for="husband">Husband Surname</label>
+                <input type="text" name="husbandName" id='husbandName' class="form-control form-control-sm">
             </div>
         </div>
         <div class="row">
             <div class="col">    
                 <label>National Id Number</label>
-                <input type="text" name="idNumber" class="form-control form-control-sm" placeholder="ID Number ">
+                <input type="text" name="idNumber" id='idNumber' class="form-control form-control-sm" placeholder="ID Number ">
             </div>
 
             <div class="col">
-                <label for="">Weight</label>
-                <input type="text" name="weight" class="form-control form-control-sm" placeholder="Weight">
+                <label for="">Next Of Keen</label>
+                <input type="text" name="weight" id='keen' class="form-control form-control-sm">
             </div>
         </div>
 
         <div class="row">
             <div class="col">    
             <label for="">Level Of Education</label>
-                <select class="form-select form-select-sm" name="education" id="">
+                <select class="form-select form-select-sm" name="education" id="education">
                     <option value="none">None</option>
                     <option value="Elementary">Elementary School</option>        
                     <option value="Primary">Primary</option>
@@ -155,15 +138,15 @@
             </div>
         </div>
         <div class="row">
-            <div class="col">    
+            <div class="col">
                 <label for="deliveryDate">Delivery Date</label>
-                <input type="datetime-local" name="deliveryDate" class="form-control form-control-sm">
+                <input type="date" name="deliveryDate" class="form-control form-control-sm">
             </div>
             <div class="col">
                 <label for="deliveyMethod">Delivery Method</label>
                 <select name="deliveryMethod" class="form-select form-select-sm">
                     <option value="Ceasarean Section">Ceasarean Section</option>
-                    <option value="Normal Delivery">Vaginal Delivery</option>
+                    <option value="Normal Delivery">Normal  Delivery</option>
                     <option value="Labour Induction">Labour Induction</option>
                     <option value="Episiotomy">Episiotomy</option>
                     <option value="Obsterical Forceps">Obsterical Forceps</option>
@@ -286,7 +269,6 @@
                 <label>Birth Place</label>
                 <select name="birthPlace" class="form-select form-select-sm">
                 <option value="Gokwe South District Hospital">Gokwe South District Hospital</option>
-                <option value="Cheziya Clinic">Cheziya Clinic</option>
             </select>
             </div>
         
@@ -299,19 +281,20 @@
                 </select>
             </div>
         </div>
+
         <div class="row">
             <div class="col">
-
-            <label for="apScore">APGAR Score</label>
+                <label for="apScore">APGAR Score</label>
                 <input type="text" name="apScore" class="form-control form-control-sm" >
-
             </div>
+
             <div class="col">
                 <label>Labour Hours</label>
                 <input type="text" name="labor" class="form-control form-control-sm" placeholder=" Hours In Labour">
             </div>
         </div>
-        <div class="form-floating">
+
+        <div class="">
             <div class="row">
                 <div class="col">
                 <label class="form-label">Comments</label>

@@ -10,9 +10,15 @@ if(isset($_POST['login']))
 {
     if(!empty($_POST['user_email'] && $_POST['pwd']))
     {
+
+if(empty($_POST['email'])){
+    redirect("../login.view.php?login=invalid&email=$email");
+
+}
+
         $input = clean($_POST);
         $email=$input['user_email'];
-        $pwd=md5($input['pwd']);
+        $pwd=($input['pwd']);
         
         $stmt=$pdo->prepare('SELECT *  FROM real_users WHERE (user_email=? and user_password=?);');
         $stmt->execute(array($email,$pwd));
@@ -25,6 +31,7 @@ if(isset($_POST['login']))
         $_SESSION["surname"]=$fetch->user_surname;
         $_SESSION["email"]=$fetch->user_email;
         $_SESSION["post"]=$fetch->user_post;
+        $_SESSION['id']=$fetch->id;
         redirect("../home.php");
     } 
     else

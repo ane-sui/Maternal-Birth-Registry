@@ -28,4 +28,17 @@ if (isset($_POST['del'])) {
     redirect('../views/total.users.php?update=delete');
 
 }
+if (isset($_POST['delete-user'])) {
 
+    $stmt=$pdo->prepare('DELETE FROM real_users WHERE id=:id');
+    $stmt->execute(['id'=>$id]);
+    redirect('../views/users.php?update=delete');
+
+}
+if (isset($_POST['mgt-delete'])) {
+
+    $stmt=$pdo->prepare('DELETE FROM mgt WHERE id=:id');
+    $stmt->execute(['id'=>$id]);
+    redirect('../views/total-mgt.php?update=delete');
+
+}

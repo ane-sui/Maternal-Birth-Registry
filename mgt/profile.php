@@ -54,25 +54,18 @@ $children=$stmt->rowCount();
         }
         </style>
 
-
-
-
-
-
-
-
     <section class='con3'>
             <!-- <img src="../img/asian.jpg" class="neo3" alt=""> -->
-            <div class="h5">Patient Profile For: <?=$result->name?> <?=$result->surname?> </div>
-            <form action='' method=''>
+            <div class="h5">Profile For: <?=$result->name?> <?=$result->surname?> </div>
+            <form action='inc/profile-update.php' method='POST'>
             <div class="row">
             <div class="col">    
                 <label for="">Maiden Name</label>
-                <input type="text" name="name" readonly class="form-control form-control-sm" value="<?=$result->name?>" >
+                <input type="text" name="name"  class="form-control form-control-sm" value="<?=$result->name?>" >
             </div>
             <div class="col">
                 <label>Maiden Surname</label>
-                <input type="text" name="surname" readonly class="form-control form-control-sm" value="<?=$result->surname?>">
+                <input type="text" name="surname" class="form-control form-control-sm" value="<?=$result->surname?>">
             </div>
         </div>
         <div class="row">
@@ -105,7 +98,7 @@ $children=$stmt->rowCount();
             <div class="col">
                 <label for="">Nationality</label>
 
-                <select name="ethnicity" id="" readonly class="form-select form-select-sm">
+                <select name="nationality" id="" readonly class="form-select form-select-sm">
                     <option selected><?=$result->nationality?></option>
                     <option value="Zimbabwean">Zimbabwean</option>
                     <option value="South African">South African</option>
@@ -119,12 +112,16 @@ $children=$stmt->rowCount();
         <div class="row">
             <div class="col">    
                 <label>National Id Number</label>
-                <input type="text" name="idNumber" readonly class="form-control form-control-sm" value="<?=$result->idNumber?>">
+                <input type="text" name="idNumber" class="form-control form-control-sm" value="<?=$result->idNumber?>">
             </div>
 
             <div class="col">
                 <label for="">HIV Status</label>
-                <input type="text" name="weight" class="form-control form-control-sm" value="<?=$result->afterAdmission?>">
+                <select name="afterAdmission" id="afterAdmission" class='form-select form-select-sm'>
+                    <option value=""><?=$result->afterAdmission?></option>
+                    <option value="Negative">Negative</option>
+                    <option value="Positive">Positive</option>
+                </select>
             </div>
         </div>
 
@@ -159,18 +156,19 @@ $children=$stmt->rowCount();
                 </div>
             </div>
 <br>
-            <a  href="../edit.php?id=<?=$result->id?>" class='btn btn-success btn-sm'>Edit Profile</a>
-            <button onclick="print()" class='btn btn-warning btn-sm' id='print' >Print Profile</button>
-
+<input type='hidden' name='id'value='<?=$result->id?>'>
+            <!-- <a  href="../edit.php?id=<?=$result->id?>" class='btn btn-success btn-sm'>Update</a>
+            <button onclick="print()" class='btn btn-warning btn-sm' id='print' >Print Profile</button> -->
+<input type="submit" name="update" class="btn btn-warning btn-sm form-control form-control-sm" value="Update">
 
         </form>
         </section>
     </body>
 
 <?php endforeach;?>
-<script>
+<!-- <script>
     const printBtn=document.getElementById('print');
     printBtn.addEventListener('click',function(){
         print();
     })
-</script>
+</script> -->

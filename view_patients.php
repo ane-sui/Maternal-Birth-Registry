@@ -26,18 +26,18 @@ if ($_GET['update']=="success")
     <table class=" table table-bordered table-striped " >
 <?php if(!empty($msg)){echo $msg;}?>      
 
-    <thead class="tb">
+    <thead class="tbt ">
         <tr>
-            <th >NAME</th >
-            <th>SURNAME</th>
-            <th>ADDRESS</th>
-            <th>NATIONAL ID NUMBER</th>
-            <th >AGE</th >
+            <th >Name</th >
+            <th>Surname</th>
+            <th>Address</th>
+            <th>National Id Number</th>
+            <th >Age</th >
             <th>Action</th>
             <th></th>
         </tr >
     </thead >
-    <tbody >
+    <tbody class="tbt">
         <?php foreach($results as $result):?>
         <tr>
             <td><?=$result->name?></td >
@@ -46,18 +46,19 @@ if ($_GET['update']=="success")
             <td><?=$result->idNumber?></td>
             <td><?=$result->age?></td>
             <td><a class="btn btn-success btn-sm" href="edit.php?id=<?=$result->id?>">Edit</a></td>
-            <td>
+            <!-- <td><a class="btn btn-warning btn-sm" href="adv-search.php?id=<?=$result->id?>">BRCC</a></td> -->
+
+            <!-- <td>
                 <form style="display: inline-block;" method="POST" action="includes/delete.inc.php">
                     <input type="hidden" name="id" value="<?php echo $result->id?>">
                     <input type="submit" class="btn btn-danger btn-sm" name="submit" value="Delete" >
                 </form>
-            </td>
+            </td> -->
         </tr>
         <?php endforeach;?>
     </tbody>
 
     </table>
 </section>
-<?php include_once 'footer.php';?>
-
+<script src="index.js"></script>
     

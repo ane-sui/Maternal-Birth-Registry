@@ -9,7 +9,6 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
-<title>Add Management</title>
 </head>
 <body>
 <!-- Navigation   -->
@@ -26,6 +25,9 @@ session_start();
                     </li> 
                     <li class="nav-item">
                         <a href="reg-mgt.php" class="nav-link">Add Management</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a href="admin-visuals.php" class="nav-link">Visuals</a>
                     </li> 
                     <!-- <li class="nav-item">
                         <a href="requests.view.php" class="nav-link"> <em><?=$_SESSION['email']?></em></a>

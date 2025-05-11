@@ -20,7 +20,7 @@ if (isset($_GET['search']))
 
 
 <!-- Navigation   -->
-<div class="container"> 
+<!-- <div class="container"> 
 <main class="search">
     <section>
     <?php if (!empty($msg )){echo $msg;}?>
@@ -30,7 +30,22 @@ if (isset($_GET['search']))
             </form>
         </div>
     </section>
+</main> -->
+
+<div class="container"> 
+<main class="search">
+    <section>
+    <?php if (!empty($msg )){echo $msg;}?>
+            <form  action="letter.php" method="post" class="d-flex">
+            <input value="<?php if(!empty($_GET['search'])){echo $_GET['search'];}?>" class="form-control form-control-sm me-2" type="search" name="idNumber" placeholder="Enter Maiden's ID Number" >
+
+            <input type="date" name="deliveryDate" id="dob" class="form-control form-control-sm">    
+            <button name="submit" class="btn btn-warning  btn-sm" type="submit">Search</button>
+            </form>
+        </div>
+    </section>
 </main>
+
 
 
 

@@ -48,12 +48,9 @@ if ($_GET['update']=="success")
 <body >
 
 <section class="view">
-
-
     <table class=" table table-bordered table-striped " >
-<?php if(!empty($msg)){echo $msg;}?>      
-
-    <thead class="tb">
+    <?php if(!empty($msg)){echo $msg;}?>      
+    <thead class="tbt">
         <tr>
         <th>Id</th >
             <th >Name</th >
@@ -66,7 +63,7 @@ if ($_GET['update']=="success")
 
         </tr >
     </thead >
-    <tbody>
+    <tbody class="tbt">
         <?php foreach($results as $result):?>
         <tr>
         <td><?=$result->id?></td >

@@ -29,7 +29,7 @@ if ($_GET['update']=="create")
             <th >Name</th >
             <th>Surname</th>
             <th>Email</th>
-            <th>Post</th >
+            <!-- <th>Post</th > -->
             <th>Phone Number</th>
             <th>Actions </th>
             <th></th>
@@ -41,7 +41,7 @@ if ($_GET['update']=="create")
             <td><?=$result->user_name?></td >
             <td><?=$result->user_surname?></td>
             <td><?=$result->user_email?></td>
-            <td><?=$result->user_work_post?></td>
+            <!-- <td><?=$result->user_work_post?></td> -->
             <td><?=$result->user_phone_number?></td>
             <td><a class="btn btn-warning btn-sm" href="../scripts/create.php?id=<?=$result->id?>">Accept</a></td>
             

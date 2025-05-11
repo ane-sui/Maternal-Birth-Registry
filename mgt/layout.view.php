@@ -19,7 +19,10 @@ session_start();
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a href="reports.php" class="nav-link">Reports</a>
-                </li> 
+                </li>
+                <!-- <li class="nav-item">
+                    <a href="search.php" class="nav-link">Search</a>
+                </li> -->
                 <li class="nav-item">
                     <a href="patients.php" class="nav-link">Patients</a>
                 </li> 

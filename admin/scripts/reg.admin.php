@@ -8,8 +8,8 @@ if(isset($_POST['register']))
         $name=$_POST['a_name'];
         $surname=$_POST['a_surname'];
         $email=$_POST['a_email'];
-        $pwd=$_POST['a_pwd'];
-        $cpwd=$_POST['cpwd'];
+        $pwd=($_POST['a_pwd']);
+        $cpwd=($_POST['cpwd']);
     if (empty($name)&&empty($surname)&&empty($email)&& empty($pwd)&&empty($cpwd)){
         redirect('../views/reg.admin.php?update=empty');
         exit();

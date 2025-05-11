@@ -13,7 +13,7 @@ $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
 
 
 
-// TOTAL NUMBER OF USERS IN SYTEM 
-$stmt =$pdo->prepare( "SELECT * FROM maternity WHERE birth_status= 'still-birth'");
+// TOTAL NUMBER OF USERS IN SYSTEM 
+$stmt =$pdo->prepare( "SELECT * FROM maidens WHERE birthOutcome= 'still'");
 $stmt->execute();
 $still=$stmt->rowCount();

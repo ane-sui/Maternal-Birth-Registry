@@ -17,30 +17,26 @@ session_start();
 <header>
     <nav  class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="container">
-            <a href="home.php" class="navbar-brand">Birth Registration and Issuing System</a>
+            <a href="home.php" class="navbar-brand">MATERNAL BIRTH REGISTRY SYSTEM</a>
             <ul class="navbar-nav">
-<!--             
                 <li class="nav-item">
-                    <a href="search.view.php" class="nav-link">Search</a>
-                </li> -->
+                    <a href="view_patients.php" class="nav-link">Patients</a>
+                </li> 
+                <li class="nav-item">
+                    <a href="bcletter.php" class="nav-link">Birth Confirmation Letter</a>
+                </li> 
+                <li class="nav-item">
+                    <a href="profile.php" class="nav-link">User Profile</a>
+                </li>
                 
+
                 <li class="nav-item">
-                    <a href="view_patients.php" class="nav-link"> View-All</a>
-                </li> 
-                <li class="nav-item">
-                    <a href="bcletter.php" class="nav-link">Issue BCLetter</a>
-                </li> 
+                    <a href="adv-search.php" class="nav-link">Advanced Search</a>
+                </li>
+                
                 <li class="nav-item">
                     <a href="includes/logout.inc.php" class="nav-link">Logout</a>
                 </li> 
-                <!-- <li class="nav-item">
-                <a href="account.php" class="nav-link">My Account</a>
-            </li>  -->
-                <!-- <li class="nav-item">
-                    <a href="#" class="nav-link"><?=$_SESSION['post']." ".$_SESSION['surname']?></a>
-                </li> 
-                 -->
-                
             </ul>
         </div>
     </nav>
@@ -53,13 +49,13 @@ session_start();
             <!-- <li class="nav-item">
                 <a href="signup.view.php" class="nav-link">Register</a>
             </li>  -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a href="articles.php" class="nav-link">Departments</a>
             </li>
             <li class="nav-item">
                 <a href="about.php" class="nav-link">About</a>
             </li>
-       
+        -->
             <!-- <li class="nav-item">
                 <a href="admin/views/login.view.php" class="nav-link">Admin</a>
             </li>
@@ -68,7 +64,7 @@ session_start();
     </div>
     </nav>
     <?php endif;?>
-    <?php if (isset($_SESSION['a_email'])):?> -->
+    <?php if (isset($_SESSION['a_email'])):?>
     <nav  class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="container">
             <a href="" class="navbar-brand">ADMIN DASHBOARD | MATERNAL BIRTH REGISTRY SYSTEM </a>
